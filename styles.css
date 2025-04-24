@@ -21,12 +21,14 @@
     --spacing-2000: 10rem;
 }
 
+/* CSS Reset */
 *, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* General Styles */
 body{
     font-family: 'Manrope', sans-serif;
     background-color: var(--clr-grey-200);
@@ -38,11 +40,10 @@ body{
 }
 
 .card{
-    width: 90%;
-    max-width: 20.4375rem;
+    width: 20.4375rem;
     border-radius: .625rem;
     background-color: var(--clr-white);
-    box-shadow: 0 40px 40px -10px hsla(210, 29%, 84%, .5);
+    box-shadow: 0 2.5rem 2.5rem -0.625rem hsla(210, 29%, 84%, .5);
     position: relative;
 }
 
@@ -172,16 +173,16 @@ body{
     font-size: .8125rem;
     font-weight: 500;
     line-height: 140%;
-    letter-spacing: 2px;
+    letter-spacing: .125rem;
     text-transform: uppercase;
     color: var(--clr-grey-400);
 }
 
+/* Tablet breakpoint */
 @media (min-width: 48rem) {
     .card{
-        width: 90%;
+        width: 38rem;
         height: 21.625rem;
-        max-width: 38rem;
         display: flex;
     }
 
@@ -209,9 +210,9 @@ body{
         padding: var(--spacing-200);
         justify-content: center;
         position: absolute;
-        left: 171px;
-        bottom: 65px;
-        box-shadow: 0 10px 10px 0 hsla(210, 29%, 84%, .5);
+        left: 10.6875rem;
+        bottom: 4.0625rem;
+        box-shadow: 0 .625rem .625rem 0 hsla(210, 29%, 84%, .5);
 
     }
     
@@ -223,12 +224,13 @@ body{
         transform: translate(-50%, -50%);
         width: 0;
         height: 0;
-        border-left: 25px solid transparent;
-        border-right: 25px solid transparent;
-        border-top: 25px solid var(--clr-grey-900);
+        border-left: 1.5625rem solid transparent;
+        border-right: 1.5625rem solid transparent;
+        border-top: 1.5625rem solid var(--clr-grey-900);
     }
 }
 
+/* Desktop breakpoint */
 @media (min-width: 67.5rem){
     .card{
         width: 45.625rem;
@@ -238,5 +240,13 @@ body{
     .card-info{
         padding: 1.875rem 2.5rem;
         gap: var(--spacing-300);
+    }
+
+    .card__image{
+        width: 17.8125rem;
+    }
+
+    #share-toast{
+        left: 14.0625rem;
     }
 }
