@@ -42,6 +42,7 @@ body{
     max-width: 20.4375rem;
     border-radius: .625rem;
     background-color: var(--clr-white);
+    box-shadow: 0 40px 40px -10px hsla(210, 29%, 84%, .5);
     position: relative;
 }
 
@@ -142,7 +143,7 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 30px;
+    padding: 1.875rem;
     width: 100%;
     height: 4.75rem;
     border-radius: 0 0 .625rem .625rem;
@@ -174,4 +175,68 @@ body{
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--clr-grey-400);
+}
+
+@media (min-width: 48rem) {
+    .card{
+        width: 90%;
+        height: 21.625rem;
+        max-width: 38rem;
+        display: flex;
+    }
+
+    .card__image{
+        width: 14.3125rem;
+        height: 100%;
+        object-fit: cover;
+        border-radius: .625rem 0 0 .625rem;
+    }
+
+    .card-info{
+        padding: 2.5625rem 2.25rem 2.5625rem 2rem;
+        gap: var(--spacing-300);
+    }
+
+    .card-footer{
+        position: relative;
+    }
+    
+    
+    #share-toast{
+        width: 15.5rem;
+        height: 3.4375rem;
+        border-radius: .625rem;
+        padding: var(--spacing-200);
+        justify-content: center;
+        position: absolute;
+        left: 171px;
+        bottom: 65px;
+        box-shadow: 0 10px 10px 0 hsla(210, 29%, 84%, .5);
+
+    }
+    
+    #share-toast::after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid var(--clr-grey-900);
+    }
+}
+
+@media (min-width: 67.5rem){
+    .card{
+        width: 45.625rem;
+        height: 17.5rem;
+    }
+
+    .card-info{
+        padding: 1.875rem 2.5rem;
+        gap: var(--spacing-300);
+    }
 }
